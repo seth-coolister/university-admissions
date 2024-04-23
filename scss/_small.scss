@@ -1,0 +1,145 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* BODY  */
+body {
+    display: grid;
+	font-family: $defaultFont;
+	font-size: 16px;
+	font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* HEADER  */
+#headerWrapper{grid-row-start: 1;}
+header {
+    display: grid;
+    grid-template-columns: 51px auto 44px;
+    align-items: center;
+	padding: .5rem 2vw;
+    #phone{display: none;}
+	h1 {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        padding-left: .5rem;
+        color: $primaryColor;
+    }
+} // end header
+
+/* NAVIGATION STUFF GOES HERE  */
+#navWrapper{grid-row-start: 4;}
+
+#hamburger a, #closex a{
+    display: block;
+    padding: .8rem 2vw;
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+    text-align: right;
+}// end nav buttons
+
+#closex a{margin-right: 2vw;}
+
+nav{
+    height: 100vh;
+    ul {border-bottom: 1px solid #eee;}
+    ul li{border-top: 1px solid #eee;}
+    ul li a{
+        display: block;
+        color: #333;
+        padding: 1rem 2vw;
+        text-decoration: none;
+        text-align: right;
+    }// end anchors
+    ul li a:hover{color: $menuColor;}
+    ul li.active a{background-color: lighten($menuColor, 45%);}
+}// end nav
+
+
+/* MAIN  */
+#mainWrapper{grid-row-start: 2;}
+main {
+ 	p {
+        padding: .5rem 2vw; 
+        color: $textColorDark; 
+        line-height: 125%;
+    }
+	h1 {
+        padding: 1rem 2vw .5rem 2vw; 
+        font-size: 1.5rem; 
+        color: $secondaryColor;
+        font-weight: $normalWeight
+    }
+    .hero {width: 100%;}
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+} // end main
+
+
+.admission-form{
+    margin: 1rem 2vw;
+
+    section{
+        margin: 1rem 0;
+    }
+
+    label{
+        display: block;
+        font-size: .8rem;
+        color: green;
+        padding-top: .2rem;
+    }
+    h3{
+        font-size: 1.2rem;
+        color: $primaryColor;
+        margin: 1.5rem 0 .2rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    input[type=text], input[type=email], input[type=tel], input[type=number], input[type=email], input[type=password], select{
+        display: block;
+        margin: .1rem 0 1rem 0;
+        border: 1px solid #999;
+        border-left-width: 5px;
+        border-bottom-color: #555;
+        font-size: 1rem;
+        color: $textColorDark;
+        width: 320px;
+        padding: .5rem $gutter;
+    }
+
+    input:required{border-left-color: red;}
+    input:focus{border-left-color: grey;}
+    input:required:valid{border-left-color: green;}
+
+    input[type=submit]{
+        border: none;
+        background-color: $secondaryColor;
+        color: white;
+        border-radius: 1rem;
+        padding: .75rem 1.5rem;
+        margin: 2rem 0;
+        width: 320px;
+        font-size: 1.2rem;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}// end of form
+
+
+
+/* FOOTER  */
+#footerWrapper {background-color: #1b1b1b; }
+footer {
+    font-size: .85rem;
+	padding: 1rem 0;
+	color: #bbb;
+	text-align: center;
+	a{color: #eee;}
+}

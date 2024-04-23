@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Navigation Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css"/>
+
+<!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="headerWrapper">
+	<header>
+        <img src="images/logo1x.png" alt="logo">
+		<h1>Seth Callister University</h1>
+        <div id="hamburger"><a href="#closex">&#9776;</a></div>
+        <div id="phone"><a href="tel:18005551234">1-800-555-1234</a></div>
+	</header>
+</div><!-- end header wrapper -->
+
+    
+    
+<div id="navWrapper">
+    <nav>
+        <div id="closex"><a href="#hamburger">x</a></div>
+        <ul>
+        <li><a href="#">Clients</a>
+        <li><a href="#">Services</a></li>
+        <li class="active"><a href="#">Best Practices</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </nav>
+</div> <!-- end nav wrapper -->
+
+<div id="mainWrapper">
+    <main>
+        <h1>Apply for Admission</h1>
+
+        <form method="GET" action="thanks.html" class="admission-form" autocomplete="on">
+
+            <section>
+                <h3>Personal Information</h3>
+                <label>First Name: <input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></label>
+                <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label>
+                <label>Email: <input type="email" name="email" autocomplete="email" required title="Your Email Please"></label>
+                <label>Cell Phone: <input type="tel" name="phone" autocomplete="tel" required title="Cell Phone Here"></label>
+            </section>
+
+            <section>
+                <h3>Academic Information</h3>
+                <label>
+                    <select name="Education Level">
+                        <option>Please Select</option>
+                        <option value="High School Diploma or GED">High School Diploma or GED</option>
+                        <option value="High School Diploma or GED">Some College</option>
+                        <option value="High School Diploma or GED">Associates Degree</option>
+                        <option value="High School Diploma or GED">Bachelors Degree</option>
+                        <option value="High School Diploma or GED">Masters Degree</option>
+                        <option value="High School Diploma or GED">Doctorate</option>
+                    </select>
+                </label>
+            </section>
+
+            <section>
+                <h3>Areas of Interest</h3>
+                <label><input type="checkbox" name="interested in STEM">STEM</label>
+                <label><input type="checkbox" name="interested in Humanities">Humanities</label>
+                <label><input type="checkbox" name="interested in Business">Business</label>
+            </section>
+
+            <section>
+                <h3>Type of Degree You're Seeking</h3>
+                <label><input type="radio" name="degree">Bachelors</label>
+                <label><input type="radio" name="degree">Masters</label>
+                <label><input type="radio" name="degree">PhD</label>
+            </section>
+
+            <section>
+                <label>Username (6 or More)<input type="text" required minlength="6" title="Please enter a username that is at least 6 characters long"></label>
+                <label> Password (5-9 letters or numbers)<input type="password" name="password" required pattern="[A-Za-z0-9]{5,9}" title="Please enter a password that is 5-9 letters or numbers long please"></label>
+            </section>
+
+            <input type="submit" value="Apply">
+        </form>
+    </main>
+</div><!-- end main wrapper -->
+    
+<div id="footerWrapper">
+    <footer>
+        <p>Copyright &copy; Seth Callister University. All rights reserved. 
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Sales</a> | <a href="#">Clients</a></p>
+    </footer>
+</div> <!-- end footer wrapper -->
+   
+</body>
+</html> 

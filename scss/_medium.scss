@@ -1,0 +1,42 @@
+// header
+#headerWrapper{
+    border-bottom: 1px solid #eee;
+}
+header{
+    grid-template-columns: 51px auto auto;
+    #phone {
+        display: block;
+        justify-self: end;
+        a {
+            color: $secondaryColor;
+            text-decoration: none;
+            font-weight: $normalWeight;
+            font-size: 1.5rem;
+        }
+    }// end phone
+}// end header
+
+
+
+
+
+
+/* NAVIGATION STUFF GOES HERE  */
+#hamburger, #closex{display: none;}
+nav {
+    height: auto;
+    ul{
+        display: flex;
+        justify-content: end;
+        border: none;
+        li {border: none;}
+    }// end ul
+} //end nav
+
+
+// Structure stuff here
+
+#headerWrapper{grid-row-start: 1;}
+#navWrapper {grid-row-start: 2;}
+#mainWrapper{grid-row-start:3}
+#footerWrapper{grid-row-start:4}
